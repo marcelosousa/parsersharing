@@ -1,0 +1,17 @@
+Sharing Parsers
+Marcelo Sousa, Utrecht University 2011
+
+Abstract:
+Currently all parsing libraries will parse a piece of text twice with the same non-terminal if the grammar has various way of reaching the same point in the input. To solve the problem I've created a general parsing library suited for sharing non-terminals in an online, typeful way.
+
+More info check the haddock documentation in the doc folder
+and the presentation slides at http://dl.dropbox.com/u/279177/Presentation.pdf
+
+The src folder contains:
+- ParserSharingSimple.hs - The core library with no-sharing. It's a good way to get to know the library and then to move to the shared version
+- ParserSharingCombinators.hs - Some classical parsers combinators are defined there in order to exemplify how is to move between the library and standard
+parsing combinator libraries. It's also better to define your own parsers with the combinators which you are already familiarized with.
+- ParserSharing.hs - The extended version of ParserSharingSimple.hs with sharing between alternatives and sequences of parsers. Left factorization is implemented for N alternatives and a lazy sharing version is also working that allows the library to identify common future parsing trees segments.
+
+For questions, suggestions and bugs contact:
+Marcelo Sousa <dipython@gmail.com>
