@@ -5,7 +5,7 @@ Abstract:
 Currently all parsing libraries will parse a piece of text twice with the same non-terminal if the grammar has various way of reaching the same point in the input. To solve the problem I've created a general parsing library suited for sharing non-terminals in an online, typeful way.
 
 More info check the haddock documentation in the doc folder
-and the presentation slides at http://dl.dropbox.com/u/279177/Presentation.pdf
+and the presentation slides.
 
 The src folder contains:
 - ParserSharingSimple.hs - The core library with no-sharing. It's a good way to get to know the library and then to move to the shared version
